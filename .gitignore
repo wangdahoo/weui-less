@@ -123,3 +123,5 @@ typings/
 .dynamodb/
 
 # End of https://www.gitignore.io/api/node,code,macos
+
+app/style/weui.wxss

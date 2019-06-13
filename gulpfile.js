@@ -1,14 +1,16 @@
-var gulp = require('gulp')
-var less = require('gulp-less')
-var rename = require('gulp-rename')
-var postcss = require('gulp-postcss')
-var cssnano = require('gulp-cssnano')
-var header = require('gulp-header')
-var autoprefixer = require('autoprefixer')
-var pkg = require('./package.json')
+const gulp = require('gulp')
+const less = require('gulp-less')
+const rename = require('gulp-rename')
+const postcss = require('gulp-postcss')
+const cssnano = require('gulp-cssnano')
+const header = require('gulp-header')
+const autoprefixer = require('autoprefixer')
+const pkg = require('./package.json')
+
+const dist = process.env.DIST || 'dist'
 
 gulp.task('build', function () {
-  var banner = [
+  const banner = [
     '/*!',
     ' * WeUI v<%= pkg.weui.version %>',
     ' */',
@@ -16,7 +18,7 @@ gulp.task('build', function () {
   ].join('\n')
 
   gulp
-    .src(['src/weui.less', 'dist/*.wxss'], { base: 'src' })
+    .src(['src/weui.less', `${dist}/*.wxss`], { base: 'src' })
     .pipe(less())
     .pipe(postcss([autoprefixer(['iOS >= 8', 'Android >= 4.1'])]))
     .pipe(
@@ -32,5 +34,5 @@ gulp.task('build', function () {
         path.extname = '.wxss'
       })
     )
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(`${dist}`))
 })

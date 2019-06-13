@@ -10,7 +10,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "stylelint --fix ./src",
-    "build": "gulp build"
+    "build": "gulp build",
+    "build:app": "DIST=./app/style gulp build"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.1",
