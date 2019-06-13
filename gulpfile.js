@@ -18,7 +18,7 @@ gulp.task('build', function () {
   ].join('\n')
 
   gulp
-    .src(['src/weui.less', `${dist}/*.wxss`], { base: 'src' })
+    .src(['src/weui.less'], { base: 'src' })
     .pipe(less())
     .pipe(postcss([autoprefixer(['iOS >= 8', 'Android >= 4.1'])]))
     .pipe(
