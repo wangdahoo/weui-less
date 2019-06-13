@@ -1,5 +1,5 @@
 {
-  "name": "weui-less",
+  "name": "@wangdahoo/weui-less",
   "version": "1.0.0",
   "weui": {
     "version": "1.1.1"
