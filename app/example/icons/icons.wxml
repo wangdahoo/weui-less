@@ -4,6 +4,8 @@
         <view class="page__desc">图标</view>
     </view>
     <view class="page__bd">
+        <!--
+
         <view class="icon-box">
             <icon type="success" size="93"></icon>
             <view class="icon-box__ctn">
@@ -48,6 +50,15 @@
             <icon type="info_circle" size="23"></icon>
             <icon type="cancel" size="23"></icon>
             <icon type="search" size="20"></icon>
+        </view>
+
+        -->
+
+        <view class="minui_icon_list">
+          <view wx:for="{{minui_icons}}" wx:for-item="icon" wx:key="index" class="icon_item_demo">
+            <view class="minui-icon minui-icon-{{icon}}"></view>
+            <text class="icon_type">{{icon}}</text>
+          </view>
         </view>
     </view>
 </view>

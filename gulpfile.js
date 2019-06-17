@@ -43,5 +43,5 @@ gulp.task('build', function () {
 })
 
 gulp.task('default', function () {
-  gulp.watch(['src/**', './theme.js'], ['build'])
+  gulp.watch(['src/**', './theme.js', 'app/**'], ['build'])
 })
