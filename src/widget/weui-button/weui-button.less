@@ -2,7 +2,7 @@
 
 @import "../../base/fn.less";
 
-.weui-btn{
+.weui-btn {
 	margin-top: @weuiBtnDefaultGap;
 
 	&:first-child{
@@ -10,6 +10,70 @@
 	}
 }
 
-.weui-btn-area{
+.weui-btn-area {
 	margin: @weuiCellsMarginTop @weuiBtnDefaultGap .3em;
 }
+
+// 覆盖 button 主题色 - START
+button[type=primary] {
+  color:#FFFFFF;
+  background-color: @weuiColorPrimary;
+
+  &.button-hover, &:active {
+    background-color: darken(@weuiColorPrimary, 6.5%);
+    color: rgba(255, 255, 255, 0.6)
+  }
+
+  &[aria-disabled="true"], &:disabled {
+    background-color: lighten(@weuiColorPrimary, 6.5%);
+    color: rgba(255, 255, 255, 0.6)
+  }
+
+  &[plain] {
+    color: lighten(@weuiColorPrimary, 6.5%);
+    background-color: transparent !important;
+    border: 1px solid lighten(@weuiColorPrimary, 6.5%);
+    
+    &.button-hover, &:active {
+      color: @weuiColorPrimary;
+      border: 1px solid @weuiColorPrimary;
+    }
+  
+    &[aria-disabled="true"], &:disabled {
+      color: lighten(@weuiColorPrimary, 6.5%);
+      border: 1px solid lighten(@weuiColorPrimary, 6.5%);
+    }
+  }
+}
+
+button[type=warn] {
+  color:#FFFFFF;
+  background-color: @weuiColorWarn;
+
+  &.button-hover, &:active {
+    background-color: darken(@weuiColorWarn, 15%);
+    color: rgba(255, 255, 255, 0.6)
+  }
+
+  &[aria-disabled="true"], &:disabled {
+    background-color: lighten(@weuiColorWarn, 15%);
+    color: rgba(255, 255, 255, 0.6)
+  }
+
+  &[plain] {
+    color: lighten(@weuiColorWarn, 6.5%);
+    background-color: transparent !important;
+    border: 1px solid lighten(@weuiColorWarn, 6.5%);
+    
+    &.button-hover, &:active {
+      color: @weuiColorWarn;
+      border: 1px solid @weuiColorWarn;
+    }
+  
+    &[aria-disabled="true"], &:disabled {
+      color: lighten(@weuiColorWarn, 6.5%);
+      border: 1px solid lighten(@weuiColorWarn, 6.5%);
+    }
+  }
+}
+// 覆盖 button 主题色 - END

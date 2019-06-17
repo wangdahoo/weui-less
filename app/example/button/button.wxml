@@ -17,6 +17,9 @@
             <button class="weui-btn" type="primary" plain="true">按钮</button>
             <button class="weui-btn" type="primary" disabled="true" plain="true">按钮</button>
 
+            <button class="weui-btn" type="warn" plain="true">按钮</button>
+            <button class="weui-btn" type="warn" disabled="true" plain="true">按钮</button>
+
             <button class="weui-btn" type="default" plain="true">按钮</button>
             <button class="weui-btn" type="default" disabled="true" plain="true">按钮</button>
 

@@ -11,7 +11,8 @@
   "scripts": {
     "lint": "stylelint --fix ./src",
     "build": "gulp build",
-    "build:app": "DIST=./app/style gulp build"
+    "build:app": "DIST=./app/style gulp build",
+    "dev": "DIST=./app/style gulp"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.1",

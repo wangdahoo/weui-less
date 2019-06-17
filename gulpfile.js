@@ -9,6 +9,8 @@ const pkg = require('./package.json')
 
 const dist = process.env.DIST || 'dist'
 
+const theme = require('./theme')
+
 gulp.task('build', function () {
   const banner = [
     '/*!',
@@ -19,7 +21,10 @@ gulp.task('build', function () {
 
   gulp
     .src(['src/weui.less'], { base: 'src' })
-    .pipe(less())
+    .pipe(less({
+      globalVars: theme,
+      modifyVars: theme
+    }))
     .pipe(postcss([autoprefixer(['iOS >= 8', 'Android >= 4.1'])]))
     .pipe(
       cssnano({
@@ -35,4 +40,8 @@ gulp.task('build', function () {
       })
     )
     .pipe(gulp.dest(`${dist}`))
+})
+
+gulp.task('default', function () {
+  gulp.watch(['src/**', './theme.js'], ['build'])
 })
