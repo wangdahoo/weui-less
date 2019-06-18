@@ -3,32 +3,57 @@
 @import "../../base/fn.less";
 
 // icon
-.weui-icon-radio{
+.weui-icon-radio {
 	margin-left: 3.2px;
-	margin-right: 3.2px;
+  margin-right: 3.2px;
 }
 
-.weui-icon-checkbox_circle,
-.weui-icon-checkbox_success{
-	margin-left: 4.6px;
-	margin-right: 4.6px;
-}
-
-.weui-check__label{
-	&:active{
+.weui-check__label {
+	&:active {
 		background-color: @weuiCellActiveBg;
 	}
 }
 
-.weui-check{
+.weui-check {
 	position: absolute;
 	left: -9999px;
 }
 
-.weui-check__hd_in-checkbox{
-	padding-right: @weuiCellInnerGapH;
+.weui-check__hd_in-checkbox {
+  padding-right: @weuiCellInnerGapH;
+
+  .checkbox-circle {
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 1px solid @weuiLineColorLight;
+  
+    &.checked {
+      background: @weuiColorPrimary;
+      border: 1px solid @weuiColorPrimary;
+      color: #ffffff;
+
+      font-family: "minui-icon" !important;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      font-size: 12px;
+
+      &:after {
+        content: "\e62a";
+        padding-left: 5px;
+        line-height: 22px;
+      }
+    }
+  }
 }
 
-.weui-cell__ft_in-radio{
-	padding-left: @weuiCellInnerGapH;
+.weui-cell__ft_in-radio {
+  padding-left: @weuiCellInnerGapH;
+  
+  .minui-icon.minui-icon-right {
+    color: @weuiColorPrimary;
+    font-size: 16px;
+  }
 }
