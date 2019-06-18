@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -68,6 +68,13 @@
 					"id": -1,
 					"name": "icons",
 					"pathName": "example/icons/icons",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "picker",
+					"pathName": "example/picker/picker",
 					"scene": null
 				}
 			]
