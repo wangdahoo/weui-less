@@ -2,22 +2,21 @@
 
 @import "../../base/fn.less";
 
-@weuiNavBarColor: #1AAD19;
-
 .weui-navbar {
 	display: flex;
 	position: absolute;
 	z-index: 500;
 	top: 0;
 	width: 100%;
-	border-bottom: 1rpx solid #CCCCCC;
+  border-bottom: 1rpx solid #C7C7C7;
+  box-sizing: border-box;
 }
 
 .weui-navbar__item {
 	position: relative;
 	display: block;
 	flex: 1;
-	padding: 13px 0;
+	padding: 8px 0;
 	text-align: center;
 	font-size: 0;
 
@@ -37,7 +36,7 @@
 	transition: transform .3s;
 }
 
-.weui-navbar__title{
+.weui-navbar__title {
 	display: inline-block;
 	font-size: 15px;
 	max-width: 8em;
